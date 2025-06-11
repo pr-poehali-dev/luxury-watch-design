@@ -14,41 +14,35 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-luxury-dark/95 backdrop-blur-sm z-50 border-b border-luxury-gold/20">
+    <header className="fixed top-0 w-full bg-luxury-dark/90 backdrop-blur-md z-50 border-b border-luxury-gold/10">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <div className="flex items-center space-x-3">
             <Icon name="Watch" className="w-8 h-8 text-luxury-gold" />
             <div>
-              <h1 className="text-2xl font-cormorant font-bold gold-text-gradient">
+              <h1 className="text-2xl font-bold gold-text-gradient">
                 SwissTime
               </h1>
-              <p className="text-xs text-luxury-gold/70 font-light">
+              <p className="text-xs text-luxury-gold/70">
                 Мастерская элитных часов
               </p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-white hover:text-luxury-gold transition-colors duration-300 font-medium"
+                className="text-luxury-silver hover:text-luxury-gold transition-colors duration-300"
               >
                 {item.name}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              className="border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300"
-            >
+          <div className="hidden md:flex">
+            <Button className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-medium">
               <Icon name="Phone" className="w-4 h-4 mr-2" />
               Связаться
             </Button>

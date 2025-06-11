@@ -1,58 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 26 31 44;
-    --foreground: 255 255 255;
+    --background: 10 10 10;
+    --foreground: 245 245 245;
 
-    --card: 44 53 68;
-    --card-foreground: 255 255 255;
+    --card: 26 26 26;
+    --card-foreground: 245 245 245;
 
-    --popover: 26 31 44;
-    --popover-foreground: 255 255 255;
+    --primary: 255 215 0;
+    --primary-foreground: 10 10 10;
 
-    --primary: 212 175 55;
-    --primary-foreground: 26 31 44;
+    --secondary: 26 26 26;
+    --secondary-foreground: 245 245 245;
 
-    --secondary: 44 53 68;
-    --secondary-foreground: 255 255 255;
+    --muted: 26 26 26;
+    --muted-foreground: 156 163 175;
 
-    --muted: 44 53 68;
-    --muted-foreground: 192 192 192;
+    --accent: 255 215 0;
+    --accent-foreground: 10 10 10;
 
-    --accent: 212 175 55;
-    --accent-foreground: 26 31 44;
-
-    --destructive: 220 38 127;
-    --destructive-foreground: 255 255 255;
-
-    --border: 44 53 68;
-    --input: 44 53 68;
-    --ring: 212 175 55;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 26 31 44;
-    --sidebar-foreground: 255 255 255;
-    --sidebar-primary: 212 175 55;
-    --sidebar-primary-foreground: 26 31 44;
-    --sidebar-accent: 44 53 68;
-    --sidebar-accent-foreground: 255 255 255;
-    --sidebar-border: 44 53 68;
-    --sidebar-ring: 212 175 55;
+    --border: 38 38 38;
+    --input: 26 26 26;
+    --ring: 255 215 0;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-luxury-dark text-white font-montserrat;
+    @apply bg-luxury-dark text-luxury-silver font-sans;
   }
 
   h1,
@@ -61,29 +39,20 @@
   h4,
   h5,
   h6 {
-    @apply font-cormorant;
+    @apply font-bold text-luxury-silver;
   }
 }
 
 @layer components {
   .gold-text-gradient {
-    background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 50%, #d4af37 100%);
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gold-shine 3s ease-in-out infinite;
   }
 
   .luxury-card {
-    @apply bg-luxury-charcoal border border-luxury-gold/20 rounded-lg p-6 hover:border-luxury-gold/50 transition-all duration-300;
-  }
-
-  .gold-border-gradient {
-    border: 1px solid transparent;
-    background:
-      linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(244, 228, 166, 0.1))
-        padding-box,
-      linear-gradient(135deg, #d4af37, #f4e4a6) border-box;
+    @apply bg-luxury-charcoal border border-luxury-gold/20 rounded-lg p-6 hover:border-luxury-gold/40 transition-all duration-300;
   }
 }

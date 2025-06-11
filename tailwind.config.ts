@@ -63,11 +63,11 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         luxury: {
-          dark: "#1A1F2C",
-          gold: "#D4AF37",
-          "gold-light": "#F4E4A6",
-          charcoal: "#2C3544",
-          silver: "#C0C0C0",
+          dark: "#0A0A0A",
+          charcoal: "#1A1A1A",
+          gold: "#FFD700",
+          "gold-light": "#FFED4E",
+          silver: "#F5F5F5",
         },
       },
       fontFamily: {
